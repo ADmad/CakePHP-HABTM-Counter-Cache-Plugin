@@ -521,7 +521,7 @@ class HabtmCounterCacheBehavior extends ModelBehavior {
 			)
 		);
 
-		$query = Set::merge($defaults, $options);
+		$query = Hash::merge($defaults, $options);
 
 		// Used find('threaded') to get the data out in a nested hierarchy.
 		$items = $model->$habtmAlias->find('threaded', $query);
